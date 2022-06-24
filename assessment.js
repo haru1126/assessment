@@ -45,7 +45,7 @@ assessmentButton.onclick = () => {
   tweetDivided.appendChild(script);
 };
 const answers = [
-'{userName}のいいところは声です。{userName}の特徴的な声は皆を惹きつけ、心に残ります。',
+'{userName}のいいところはあきらめない力です。{userName}の精神的な強さは皆を励まし、心に残ります。',
 '{userName}のいいところはまなざしです。{userName}に見つめられた人は、気になって仕方がないでしょう。',
 '{userName}のいいところは情熱です。{userName}の情熱に周りの人は感化されます。',
 '{userName}のいいところは厳しさです。{userName}の厳しさがものごとをいつも成功に導きます。',
