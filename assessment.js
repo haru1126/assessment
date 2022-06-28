@@ -17,14 +17,37 @@ assessmentButton.onclick = () => {
 
   // TODO 診断結果表示エリアの作成
   resultDivided.innerText = '';
-  const header = document.createElement('h3');
-  header.innerText = '診断結果';
-  resultDivided.appendChild(header);
+  // const header = document.createElement('h3');
+  // header.innerText = '診断結果';
+  // resultDivided.appendChild(header);
+  
+  // headerDivided の作成
+  const headerDivided = document.createElement('div');
+  headerDivided.setAttribute('class', 'card-header');
+  headerDivided.innerText = '診断結果';
+{/* <img src="..." class="card-img-top" alt="..."></img> */}
+  // bodyDivided の作成
+  const bodyDivided = document.createElement('div');
+  bodyDivided.setAttribute('class', 'card-body');
 
   const paragraph = document.createElement('p');
+  paragraph.setAttribute('class', 'card-text');
   const result = assessment(userName);
   paragraph.innerText = result;
-  resultDivided.appendChild(paragraph);
+  bodyDivided.appendChild(paragraph);
+
+  // resultDivided に Bootstrap のスタイルを適用する
+  resultDivided.setAttribute('class', 'card');
+  resultDivided.setAttribute('style', 'max-width: 700px;')
+
+  // headerDivided と bodyDivided を resultDivided に差し込む
+  resultDivided.appendChild(headerDivided);
+  resultDivided.appendChild(bodyDivided);
+
+  // const paragraph = document.createElement('p');
+  // const result = assessment(userName);
+  // paragraph.innerText = result;
+  // resultDivided.appendChild(paragraph);
 
   // TODO ツイートエリアの作成 
   tweetDivided.innerText = '';
@@ -45,7 +68,7 @@ assessmentButton.onclick = () => {
   tweetDivided.appendChild(script);
 };
 const answers = [
-'{userName}のいいところはあきらめない力です。{userName}の精神的な強さは皆を励まし、心に残ります。',
+'{userName}のいいところは声です。{userName}の特徴的な声は皆を惹きつけ、心に残ります。',
 '{userName}のいいところはまなざしです。{userName}に見つめられた人は、気になって仕方がないでしょう。',
 '{userName}のいいところは情熱です。{userName}の情熱に周りの人は感化されます。',
 '{userName}のいいところは厳しさです。{userName}の厳しさがものごとをいつも成功に導きます。',
